@@ -18,10 +18,10 @@ volume = cast(interface, POINTER(IAudioEndpointVolume))
 
 # Function Call to Play Alarm Audio
 def playAudio():
-    currentVolumeDb = volume.GetMasterVolumeLevel()			# Get current Volume level
-    volume.SetMasterVolumeLevel(-7.74639749, None)			# Change Volume level to 60%
-    playsound('C:\Windows\Media\Ring08.wav')				# Play alert/sound
-    volume.SetMasterVolumeLevel(currentVolumeDb, None)		# Revert Volume level back to original
+    currentVolumeDb = volume.GetMasterVolumeLevel()         # Get current Volume level
+    volume.SetMasterVolumeLevel(-7.74639749, None)          # Change Volume level to 60%
+    playsound('C:\Windows\Media\Ring08.wav')                # Play alert/sound
+    volume.SetMasterVolumeLevel(currentVolumeDb, None)      # Revert Volume level back to original
 
 
 while(True):
